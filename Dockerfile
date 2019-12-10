@@ -1,6 +1,6 @@
 FROM node:alpine as BuildStage
 
-WORKDIR "/app"
+WORKDIR /app
 
 COPY package.json .
 
@@ -13,7 +13,7 @@ RUN npm run build
 
 FROM nginx
 
-COPY --FROM=BuildStage /app/build /usr/share/nginx/html
+COPY --from=BuildStage /app/build /usr/share/nginx/html
 
 
 

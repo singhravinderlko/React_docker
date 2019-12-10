@@ -1,6 +1,6 @@
 FROM node:alpine
 
-WORKDIR '/app'
+WORKDIR /app
 COPY package.json .
 
 #To install dependencies mentioned in package.json 
