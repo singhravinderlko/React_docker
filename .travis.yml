@@ -7,6 +7,5 @@ Before_install:
   - docker build -t ReactImage -f dockerfile.dev .
   
 Script:
-  - docker run ReactImage npm run test -- --coverage
+  - docker run reactimage npm run test -- --coverage
 
-  
